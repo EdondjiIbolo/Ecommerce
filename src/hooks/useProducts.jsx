@@ -6,7 +6,7 @@ export const useProducts =()=>{
 
     useEffect(()=>{
 
-        fetch(`http://localhost:1234/items?search=${search}`)
+        fetch(`https://api-deploy-9itl-dev.fl0.io/items?search=${search}`)
         .then(data=> data.json()
         ).then(file=>{
             const newProducts = file

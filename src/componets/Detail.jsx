@@ -13,7 +13,7 @@ export function Deatail(){
         }
         useEffect(()=>{
             
-            fetch(`http://localhost:1234/items/${id}`)
+            fetch(`https://api-deploy-9itl-dev.fl0.io/items/${id}`)
             .then(res=>{
                 if(res.ok){
                     return res.json()
