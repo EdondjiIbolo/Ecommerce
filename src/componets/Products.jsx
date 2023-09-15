@@ -16,7 +16,7 @@ export function Products(){
                                         <img src={`${product.thumbnail}`} alt={`${product.title}`} />
                                     </picture>
                                     <article>
-                                        <h2>{product.title}</h2>
+                                        <h2>{product?.title}</h2>
                                         <p className="text">{product.description}</p>
                                         <footer>
                                         <span className="prices">{product.price}$</span> 
