@@ -19,7 +19,7 @@ export function Products(){
                                         <h2>{product.title}</h2>
                                         <p className="text">{product.description}</p>
                                         <footer>
-                                        <span className="prices">{product.price}</span> 
+                                        <span className="prices">{product.price}$</span> 
                                         <span className="range">{product.rating}</span>
                                         </footer>
                                     </article>
