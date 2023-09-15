@@ -9,7 +9,6 @@ export function SearchPage(){
     const [inputText , setInputText] = useState('') 
     const handleChange =(e)=>{
         setInputText(e.target.value)
-        console.log(inputText)
     }
     const LinkId = useId()
     const linkHandleClick =()=>{

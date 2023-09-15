@@ -24,7 +24,6 @@ export function Deatail(){
             })
             .then(data=>{
                 const newProduct = data[0]
-                console.log(newProduct.thumbnail)
     
                 setProduct(newProduct)
             })
@@ -32,7 +31,7 @@ export function Deatail(){
         return {product , getQty}
     }
     const  {product } = useProduct()
-    const {addToCart , removeFromCart , cart} = useCartContext()
+    const {addToCart , cart} = useCartContext()
     const isInCart = cart.some(item => item.id == product?.id)
        
 
