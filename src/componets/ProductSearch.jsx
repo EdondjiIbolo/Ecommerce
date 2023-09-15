@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import { useProductContext } from '../hooks/useProductContex'
-import { Header } from './Header'
+import { useProductContext } from '../hooks/useProductContex.jsx'
+import { Header } from './Header.jsx'
 import './products.css'
-import { Products } from './Products'
-import { useProducts } from "../hooks/useProducts"
+import { Products } from './Products.jsx'
+import { useProducts } from "../hooks/useProducts.jsx"
 
 export function ProductSearch(){
     const  {search} = useProductContext()

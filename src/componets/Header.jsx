@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
-import { useProductContext } from '../hooks/useProductContex'
+import { useProductContext } from '../hooks/useProductContex.jsx'
 import './header.css'
-import { useEffect, useId, useState } from 'react'
-import { useCartContext } from '../hooks/useCartContext'
+import {  useId, useState } from 'react'
+import { useCartContext } from '../hooks/useCartContext.jsx'
 
 export function Header(){
     const {search , setSearch} = useProductContext()

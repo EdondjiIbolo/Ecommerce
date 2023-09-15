@@ -1,8 +1,7 @@
 import './search.css'
-import { IconEcommerce } from "./IconEcomerce";
+import { IconEcommerce } from "./IconEcomerce.jsx";
 import { Link } from 'react-router-dom';
-import { useProductContext } from '../hooks/useProductContex'
-import { useProducts } from '../hooks/useProducts';
+import { useProductContext } from '../hooks/useProductContex.jsx'
 import { useId, useState } from 'react';
 
 export function SearchPage(){

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Header } from "./Header";
+import { Header } from "./Header.jsx";
 import './detail.css'
 import { useParams } from "react-router-dom";
-import { useCartContext} from '../hooks/useCartContext'
+import { useCartContext} from '../hooks/useCartContext.jsx'
 export function Deatail(){
     const {id} = useParams()
     const useProduct=()=>{

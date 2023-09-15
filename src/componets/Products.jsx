@@ -1,7 +1,7 @@
 
 
 import { Link } from "react-router-dom"
-import { useProducts } from "../hooks/useProducts"
+import { useProducts } from "../hooks/useProducts.jsx"
 
 export function Products(){
     const {products} = useProducts()
