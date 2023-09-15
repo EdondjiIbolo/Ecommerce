@@ -1,0 +1,80 @@
+.pd-header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+.pd-header .input-box{
+    width: minmax(100%,400px);
+    display: flex;
+    gap:10px
+}
+
+
+.pd-header .input-box form{
+    flex-grow: 1;
+    width:100%;
+}
+.pd-header .input-box .input{
+    padding:5px 10px;
+    display: flex;
+    width: 95%;
+    flex-grow: 1;
+    height: 40px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    background-color: hsla(0, 5%, 41%, 0.5);
+    box-shadow: 0px 0px 1px 1px hsla(0, 6%, 70%, 0.356);
+    position: relative;
+   
+}
+
+.pd-header .input-box .input ,.pd-header .input-box .input:focus{
+    border: none;
+    outline: none;
+}
+.pd-header .input-box .input:placeholder-shown{
+    text-transform: capitalize;
+}
+.pd-header img{
+    width: 45px;
+    height: 45px;
+    display: block;
+}
+.icon{
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    transform: translate(-50% , -50%);
+}
+.icon img{
+    max-width: 100%;
+    width: 20px;
+    height: 20px;
+}
+.cart-icon{
+    position: relative;
+}
+.cart-num{
+    position: absolute;
+    content: '';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    width: 12px;
+    height: 10px;
+    border-radius: 100%;
+    top: -10px;
+    right: 0px;  
+    background-color: red;
+    color: aliceblue;
+    font-size: .8rem;
+
+}

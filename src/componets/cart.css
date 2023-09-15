@@ -1,0 +1,81 @@
+.ct{
+    width: 100%;
+    display: flex;
+    gap:20px;
+    flex-direction: column;
+    position: relative;
+}
+.ct-back{
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #494444a8;
+    border-radius: 100%;
+    margin-left: 25px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+.ct-header{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    gap:20px;
+}
+.ct-header h1{
+    margin: 0;
+}
+.ct-header-picture{
+    width: 50px;
+}
+.ct-header-title{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+   border-bottom: dotted 1px wheat;
+   padding-bottom: 5px;
+    
+}
+.ct-products{
+    display: grid;
+    gap:20px;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit , minmax(200px , 1fr));
+}
+.ct-product{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+.ct-product img{
+    padding: 15px;
+}
+.ct-product p {
+    margin: 0;
+}
+.ct-product span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:25px
+}
+.btn-del{
+   padding: 5px;
+}
+.btn-del img{
+    display: block;
+    max-width: 100%;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+  
+}
+.btn-span{
+    display: flex;
+    gap:20px
+}

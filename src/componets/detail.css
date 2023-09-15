@@ -1,0 +1,112 @@
+
+.dt-container {
+    display: flex;
+    flex-direction: column;
+    gap:20px
+}
+.dt{
+    display: flex;
+    flex-direction: column;
+    gap:10px
+}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+ 
+    object-fit: cover;
+}
+.dt-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:30px
+}
+.dt-img-big{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    overflow: hidden;
+    width: 180px;
+    height: 180px;
+}
+.dt-img-big img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+
+}
+.dt-img-flex{
+    display: flex;
+    flex-direction: column;
+    gap:10px
+}
+.dt-img-flex img{
+    width: 75px;
+    height: 75px;
+    display: block;
+    border-radius: 50%;
+}
+.dt-detail {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.dt-detail h1{
+    margin: 0;
+}
+.text__description{
+    display: block;
+    margin-inline: auto;
+    width: 75%;
+    padding: 20px;
+    font-size: .8rem;
+    text-align: center;
+}
+.data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px ; 
+    font-weight: bold;
+    font-size: .85rem;
+}
+.data div{
+    display: flex;
+    flex-direction: column;
+}
+.dt-footer{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.dt-footer .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
+    padding: 5px;
+    /* background-color: #5c5b5b; */
+    background-image: radial-gradient(circle at 5.46% 12.63%, #a66cf8 0, #835ff5 25%, #5353f2 50%, #0049ef 75%, #0042ec 100%);    width: 150px;
+    color: wheat;
+    font-weight: bold;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 2px 2px 1px #00172b;
+    transition: all 200ms ease;
+    text-decoration: none;
+}
+.dt-footer .btn:hover{
+    background-color: #ccbfbf;
+    color: #2c2a2a;
+    transform: scale(1.05);
+}
+.dt-footer .btn--green{
+    background-color: #69a333;
+    
+}

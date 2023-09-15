@@ -1,0 +1,131 @@
+.pd-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.pd{
+    width: 100%;
+    max-width: 750px;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 10px;
+}
+.pd-container section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.pd-container section section{
+    display: flex;
+    flex-direction: row;
+
+}
+.pd-container-header{
+    display: flex;
+    flex-wrap: wrap;
+}
+.pd-container section section span{
+    padding: 5px;
+    background-color: rgb(106, 123, 138);
+    color: black;
+    font-weight: bold;
+    font-size: 0.7rem;
+    text-transform: capitalize;
+}
+.pd-container section p{
+    font-size: 1rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    margin: 0;
+}
+.pd-container ul{
+    
+    margin: auto;
+    padding: 0;
+    list-style: none;
+    gap: 20px;
+}
+/* --------------------------  */
+
+/* --------------------------  */
+
+.pd-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(29, 20, 20, 0.836);
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 5px rgba(36, 29, 29, 0.815);
+    
+}
+.pd-section article{
+    padding: 10px;
+}
+
+@media screen and (max-width:378px){
+    .pd-section article{
+        padding: 0;
+    }
+}
+.pd-section picture{
+    width: 120px;
+    height: 120px;
+    display: flex;
+}
+.pd-section picture img{
+    border-radius: 50%;
+    display: flex;
+    width: 120px;
+    height: 100%;
+    max-width: 100%; 
+    object-fit: cover;
+}
+.pd-section footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.pd-section footer span{
+    font-weight: bold;
+   
+}
+h2{
+    font-size: 1.1rem;
+}
+.prices{
+    font-size: 1.15rem;
+}
+.range{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    color: orangered;
+    font-size: .65rem;
+    border-radius: 50%;
+    border: olivedrab solid 2px;
+}
+.text{
+    margin: 0;
+}
+.link-det{
+    color: antiquewhite;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all ease 200ms;
+    display: flex;
+    flex-direction: column;
+}
+.link-det:hover{
+    transform: scale(1.02);
+    color: aquamarine;
+}
