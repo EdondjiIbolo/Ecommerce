@@ -11,7 +11,7 @@ export function Rutas(){
         <Routes>
             <Route path='/' element={<SearchPage />} />
             <Route path='/cart' element={ <Cart/>} />
-            <Route path={`/items`} element={<ProductSearch />} />
+            <Route path='/items' element={<ProductSearch />} />
             <Route path='/items/:id' element={<Deatail />} />
         </Routes>
     )
