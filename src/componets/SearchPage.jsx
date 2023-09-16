@@ -5,7 +5,7 @@ import { useProductContext } from '../hooks/useProductContex.jsx'
 import { useId, useState } from 'react';
 
 export function SearchPage(){
-    const { setSearch} = useProductContext()
+    const {search, setSearch} = useProductContext()
     const [inputText , setInputText] = useState('') 
     const handleChange =(e)=>{
         setInputText(e.target.value)
@@ -26,7 +26,7 @@ export function SearchPage(){
                 <div className="input-box">
                     <input onChange={handleChange} value={inputText} className="input" type="text" placeholder="laptops, smarthphones , ..." />
                 </div>
-                <Link id={LinkId} onClick={linkHandleClick} className='button' to={`/items`}>
+                <Link id={LinkId} onClick={linkHandleClick} className='button' to={`/items?q=${inputText}`}>
                 Buscar</Link>
             </form>
         </section>

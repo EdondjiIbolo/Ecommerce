@@ -7,7 +7,7 @@ import { useProducts } from "../hooks/useProducts.jsx"
 
 export function ProductSearch(){
     const  {search} = useProductContext()
-    const {products} = useProducts()
+    const {products  , loading} = useProducts()
     const [searchCategory , setSearchCategory] = useState([])
 
     useEffect(()=>{
@@ -28,9 +28,12 @@ export function ProductSearch(){
 
     return(
         <main className='pd-container'>
-
-           <Header />
-           
+             <Header />
+             
+            {
+            loading ? <h3>Cargando...</h3> :  
+            <>
+            
             <section>
                     <p>
                         Resultados de busqueda de {search} : {products.length}
@@ -54,7 +57,12 @@ export function ProductSearch(){
                         
                     </section>
             </section>
-            <Products />      
+            <Products /> 
+            </>    
+            }
+          
+           
+ 
         </main>
     )
 }
