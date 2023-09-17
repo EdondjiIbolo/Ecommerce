@@ -18,13 +18,14 @@ export const useProductId=({id})=>{
         })
         .then(data=>{
             const newProduct = data[0]
-            setProduct(newProduct)
             console.log(newProduct)
+            setProduct(newProduct)
+            
         })
         .finally( 
             setLoading(false)
             
         )
-    },[])
+    },[id])
     return {product , loading}
 }

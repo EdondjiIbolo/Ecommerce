@@ -33,6 +33,7 @@ function CartProduct({cartProduct}){
 }
 export function Cart(){
     const {cart , clearCart} = useCartContext()
+    console.log(cart)
     return(
         <main className='ct'>
         <Link to='/items'  className='ct-back'>
@@ -51,11 +52,9 @@ export function Cart(){
 
         {
             cart.length > 0 ? 
-            cart.map(cartProduct => {
-                return(
-                    <CartProduct key={cartProduct?.id} cartProduct={cartProduct}/>
-                )
-            } )
+            cart.map(cartProduct =><CartProduct key={cartProduct.id} cartProduct={cartProduct}/>
+                
+             )
             : 
             <main style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
                 <h2>Carrito Vacio !!</h2>

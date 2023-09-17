@@ -14,9 +14,7 @@ export function Deatail(){
     const handleClick = ()=>{
         console.log(product)
         addToCart(product)
-        setTimeout(()=>{
-            console.log(product)
-        }, 2000)
+
     }
 
     return(
