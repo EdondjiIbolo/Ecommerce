@@ -9,9 +9,9 @@ export const useProducts =()=>{
         fetch(`https://api-deploy-9itl-dev.fl0.io/items?q=${search}`)
         .then(data=> data.json()
         )
-        .then(file=>{
-            const newProducts = file
-            setProduct(newProducts)
+        .then(products=>{
+    
+            setProduct(products)
         })
         .finally(
             setLoading(false)

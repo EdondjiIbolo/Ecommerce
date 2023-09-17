@@ -3,51 +3,37 @@ import { Header } from "./Header.jsx";
 import './detail.css'
 import { useParams } from "react-router-dom";
 import { useCartContext} from '../hooks/useCartContext.jsx'
+import { useProductId } from "../hooks/useProductdetail.jsx";
 export function Deatail(){
     const {id} = useParams()
-    const useProduct=()=>{
-        const [product , setProduct] =useState(null)
 
-        const getQty = ()=>{
-            return Math.floor(Math.random() * 10 + 5)
-        }
-        useEffect(()=>{
-            
-            fetch(`https://api-deploy-9itl-dev.fl0.io/items/${id}`)
-            .then(res=>{
-                if(res.ok){
-                    return res.json()
-                }
-                else{
-                    throw new Error('Error : Ocurrio unn error con la respuesta')
-                }
-            })
-            .then(data=>{
-                const newProduct = data[0]
-    
-                setProduct(newProduct)
-            })
-        },[])
-        return {product , getQty}
-    }
-    const  {product } = useProduct()
+    const  {product , loading } = useProductId({id})
     const {addToCart , cart} = useCartContext()
     const isInCart = cart.some(item => item.id == product?.id)
        
-
+    const handleClick = ()=>{
+        console.log(product)
+        addToCart(product)
+        setTimeout(()=>{
+            console.log(product)
+        }, 2000)
+    }
 
     return(
         <main className="dt-container">
-            <Header />
-           
-        <section className="dt">
+            {
+              loading ==true  ?  
+              <span className="loader"></span> :
+              <main className="dt-container">
+              <Header />
+              <section className="dt">
                 <section className="dt-img">
                     <picture className="dt-img-big">
                         <img src={product?.thumbnail} alt={product?.title} />
                     </picture>
                     <picture className="dt-img-flex">
                         {
-                            product?.images.splice(0 , 3).map((image,index)=>{
+                            product?.images?.splice(0 , 3).map((image,index)=>{
                                 return(
                                     <img src={image} alt={product?.title} key={index}/>
                                 )
@@ -72,10 +58,15 @@ export function Deatail(){
                         technology A12 Bionic chip with ...
                     </p>
                 </section>
-        </section>
+              </section>
             <footer className="dt-footer">
-                <button className={isInCart ? 'btn btn--green': 'btn'}  onClick={()=> addToCart(product)} disabled={isInCart ? true :false}>{isInCart?'Comprado':'Comprar'}</button>
+                <button className={isInCart ? 'btn btn--green': 'btn'}  onClick={handleClick} disabled={isInCart ? true :false}>{isInCart?'Comprado':'Comprar'}</button>
             </footer>
+              </main>
+            }
+            
+           
+        
         </main>
         
     )

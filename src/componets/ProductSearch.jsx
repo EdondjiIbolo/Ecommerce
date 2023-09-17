@@ -31,7 +31,10 @@ export function ProductSearch(){
              <Header />
              
             {
-            loading ? <h3>Cargando...</h3> :  
+            loading ?
+            <section>
+                <h3>Cargando...</h3> 
+            </section> :  
             <>
             
             <section>
